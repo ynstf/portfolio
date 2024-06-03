@@ -1,13 +1,20 @@
 {
-    "builds": [{
+    "version": 2,
+    "builds": [
+    {
         "src": "vercel_app/wsgi.py",
-        "use": "@ardnt/vercel-python-wsgi",
-        "config": { "maxLambdaSize": "15mb" }
-    }],
+        "use": "@vercel/python"
+    }
+    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "vercel_app/wsgi.py"
-        }
-    ]
+    {
+        "src": "/(.*)",
+        "dest": "vercel_app/wsgi.py"
+    }
+    ],
+    "env": {
+    "DJANGO_SETTINGS_MODULE": "vercel_app.settings",
+    "PYTHONUNBUFFERED": "1"
+    }
 }
+
