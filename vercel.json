@@ -1,24 +1,27 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "myproject/wsgi.py",
-        "use": "@vercel/python",
-        "config": {
-          "runtime": "python3.9",
-          "buildCommand": "pip install -r requirements.txt"
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "project/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles_build"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "myproject/wsgi.py"
-      }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "myproject.settings",
-      "PYTHONUNBUFFERED": "1"
     }
-  }
-  
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "project/wsgi.py"
+    }
+  ]
+}
