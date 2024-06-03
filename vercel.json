@@ -1,20 +1,24 @@
 {
     "version": 2,
     "builds": [
-    {
-        "src": "vercel_app/wsgi.py",
-        "use": "@vercel/python"
-    }
+      {
+        "src": "myproject/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "runtime": "python3.9",
+          "buildCommand": "pip install -r requirements.txt"
+        }
+      }
     ],
     "routes": [
-    {
+      {
         "src": "/(.*)",
-        "dest": "vercel_app/wsgi.py"
-    }
+        "dest": "myproject/wsgi.py"
+      }
     ],
     "env": {
-    "DJANGO_SETTINGS_MODULE": "vercel_app.settings",
-    "PYTHONUNBUFFERED": "1"
+      "DJANGO_SETTINGS_MODULE": "myproject.settings",
+      "PYTHONUNBUFFERED": "1"
     }
-}
-
+  }
+  
