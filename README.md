@@ -1,38 +1,65 @@
-# Django on Vercel
-This is a simple project developed using Django framework and it contains the settings required for successfull deployment of Django projects on Vercel.
-## Setup
+---
 
-Below are the steps to follow to setup this project locally on your machine;
+# Vercel Deployment for Django Project
 
-* Clone the project locally on your machine using **git clone**
-* Create and activate a new virtual enviroment.
-* To install dependencies run
-```
-pip install -r requirements.txt
-```
-* Go to the projects setting.py file and remove the comments in the database section.
+This is a sample repository demonstrating how to deploy a Django project on Vercel. By using Vercel, you can easily deploy your Django application and make it accessible on the web.
 
-* In your terminal execute the following commands to makemigrations and migrate to database
+## Prerequisites
 
-```
-python manage.py makemigrations
-python manage.py migrate
-```
+Before getting started, make sure you have the following:
 
-## Using PostgreSQL Database
+- A Django project ready for deployment.
+- A Vercel account. If you don't have one, you can sign up for free at [vercel.com](https://vercel.com/).
 
-Comment the database section out completely and paste the follwing lines of code beneath it.
+## Deployment Steps
 
-```
-DATABASES = {
-    'default': {
-        'ENGINE': "django.db.backends.postgresql_psycopg2"
-        'HOST': os.environ['HOST'],
-        'NAME': os.environ['NAME'],
-        'USER': os.environ['USER'],
-        'PASSWORD': os.environ['PASSWORD'],
-        'PORT': os.environ['PORT'],
+To deploy your Django project on Vercel, follow these steps:
 
-    }
-}
-```
+1. Clone this repository to your local machine using the following command:
+
+
+`git clone https://github.com/YourUsername/vercel_deployment.git` 
+
+2. Navigate to the project's root directory:
+
+
+`cd vercel_deployment` 
+
+3. Install the required dependencies:
+
+
+`pip install -r requirements.txt` 
+
+4. Update the Vercel configuration file (`vercel.json`) with your project settings. Modify the `"buildCommand"` and `"outputDirectory"` according to your Django project structure.
+    
+5. Login to Vercel CLI by running the following command and following the prompts:
+    
+
+
+`vercel login` 
+
+6. Deploy your Django project by running the following command:
+
+
+`vercel` 
+
+7. Follow the instructions provided by Vercel CLI to configure your deployment settings, such as choosing a project name and deployment environment.
+    
+8. Once the deployment is complete, Vercel will provide you with a unique URL where your Django project is accessible.
+    
+
+## Badges
+
+You can use the following badges to showcase your Vercel deployment status:
+
+[![Vercel](https://vercelbadge.vercel.app/api/YourUsername/vercel_deployment)](https://vercel.com/YourUsername/vercel_deployment)
+
+Replace `NagiPragalathan` with your Vercel account username and `nagipragalathan` with the actual repository name.
+
+## Contributing
+
+Contributions to this sample repository are welcome! If you have any improvements or suggestions, feel free to submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/c/LICENSE) file for more information.
