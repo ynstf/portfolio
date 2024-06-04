@@ -1,0 +1,29 @@
+{
+    "personam_info": {
+        "name": "Youness ATIF",
+        "age": 24,
+        "jobtitle":"Full Stack & Machine Learning Developer"
+        
+    },
+    "contat": {
+        "email": "younessatif2000@gmail.com",
+        "phone": "+212605153098"
+        
+    },
+    "urls":{
+        "cv":"https://drive.google.com/file/d/1W4rfsXm3kw3oWHHNa05kjn_BfzzMNafc/view?usp=sharing",
+        "github":"https://github.com/ynstf/",
+        "linkedin":"https://www.linkedin.com/in/ynstf/",
+        "kaggle":"https://www.kaggle.com/atif10"
+
+    },
+    "repo": "ynstf"
+
+
+
+
+
+    
+    
+    
+}

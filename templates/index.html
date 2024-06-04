@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Steller landing page.">
     <meta name="author" content="Devcrud">
-    <title>Youness ATIF</title>
+    
+    <title>{{me.personam_info.name}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
     <!-- font icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'imgs/favicon/favico.ico' %}" />
     <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="{% static 'css/steller.css' %}">
@@ -57,19 +61,20 @@
         <div class="container">
             <div class="infos">
                 <h6 class="subtitle">hello,I'm</h6>
-                <h6 class="title">Youness ATIF</h6>
-                <p>Full Stack & Machine Learning Developer</p>
+                <h6 class="title">{{me.personam_info.name}}</h6>
+                <p>{{me.personam_info.jobtitle}}</p>
 
                 <div class="buttons pt-3">
                     <button class="btn btn-primary rounded">HIRE ME</button>
-                    <button class="btn btn-dark rounded">DOWNLOAD CV</button>
+                    <a href="{{me.cv}}" target="_blank"><button class="btn btn-dark rounded">DOWNLOAD CV</button></a>
                 </div>      
 
                 <div class="socials mt-4">
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                    <a class="social-item" href="{{me.urls.linkedin}}" target="_blank"><i class="ti-linkedin"></i></a>
+                    <a class="social-item" href="{{me.urls.github}}" target="_blank"><i class="ti-github"></i></a>
+                    <a class="social-item" href="mailto:{{me.contat.email}}" target="_blank"><i class="fas fa-envelope"></i></a>                    
+                    <a class="social-item" href="{{me.urls.kaggle}}" target="_blank"><i class="fab fa-kaggle"></i></a>
+
                 </div>
             </div>              
             <div class="img-holder">
@@ -80,16 +85,16 @@
         <!-- Header-widget -->
         <div class="widget">
             <div class="widget-item">
-                <h2>124</h2>
-                <p>Happy Clients</p>
+                <h2>{{repos_numbers}}</h2>
+                <p>Total Projects</p>
             </div>
             <div class="widget-item">
-                <h2>456</h2>
-                <p>Project Completed</p>
+                <h2>{{languages}}</h2>
+                <p>Languages in my projects</p>
             </div>
             <div class="widget-item">
-                <h2>789</h2>
-                <p>Awards Won</p>
+                <h2>{{contributions}}</h2>
+                <p>Total Contributions</p>
             </div>
         </div>
     </header>
@@ -100,14 +105,17 @@
         <div class="container mt-5">
             <div class="row text-center text-md-left">
                 <div class="col-md-3">
-                    <img src="{% static 'imgs/avatar.jpg' %}" alt="" class="img-thumbnail mb-4">
+                    <img src="{% static 'imgs/avatari.png' %}" alt="" class="img-thumbnail mb-4">
                 </div>
                 <div class="pl-md-4 col-md-9">
-                    <h6 class="title">James Smith</h6>
-                    <p class="subtitle">UI/UX Designer</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, pariatur, aperiam aut autem voluptas odit. Odio ducimus delectus totam sed aliquam sequi praesentium mollitia, illum repudiandae quidem quod, magni magnam.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, eius, nam. Quo praesentium qui temporibus voluptatum, facilis aliquid eligendi fugiat beatae neque inventore non. Laborum repellendus consequatur ullam voluptatum asperiores.</p>
-                    <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>                   
+                    <h6 class="title">Youness Atif</h6>
+                    <p class="subtitle">AI Developer</p>
+                    <p>Recent Electronics and Artificial Intelligence Development Graduate | 🤖 Passionate about Machine Learning and Deep Learning | 💻 Enthusiastic about Web Development, Backend Development, Automation, and Data Analysis.</p>
+                    <p>Building intelligent systems and predictive models is my passion, and I have a strong foundation in machine learning and deep learning. I'm excited about the prospect of applying my passion for extracting insightful information from data and developing creative solutions in the professional world.</p>
+                    <p>In addition to my expertise in AI, I have a solid foundation in electronics, providing me with a comprehensive understanding of technology. This unique combination allows me to bridge the gap between AI and the hardware it runs on, enabling me to build efficient and integrated systems.</p>
+                    <p>My skills extend to backend development, where I excel in creating robust server-side applications and ensuring seamless communication between front-end interfaces and databases. I'm also proficient in automation, streamlining workflows and enhancing productivity through innovative solutions. My data analysis capabilities enable me to derive meaningful insights and make data-driven decisions.</p>
+                    <p>I am eager to collaborate with professionals who share my passion for AI, electronics, backend development, automation, and web development, and to gain practical experience. I'm seeking opportunities to further hone my skills and contribute to innovative projects that make a significant impact.</p>
+                    <a href="{{me.cv}}" target="_blank"><button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button></a>
                 </div>
             </div>
         </div>
