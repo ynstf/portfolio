@@ -32,7 +32,16 @@ def send_email(request):
         subject = request.POST.get('subject')
         content = request.POST.get('content')
 
-        success = send_email_to(email,subject, content)
+        # Example usage:
+        load_dotenv()
+        sender_email = os.environ.get('EMAIL')  # Your Gmail email address
+        sender_password = os.environ.get('PWD')  # Your Gmail password or app password
+        recipient_email = email  # Recipient's email address
+        body = content
+
+        success = send_email_to(sender_email, sender_password, recipient_email, subject, body)
+
+
         if success:
             messages.success(request, 'Email sent successfully')
             return redirect('home')
