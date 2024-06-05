@@ -13,7 +13,12 @@ import os
 # views.py
 from django.shortcuts import render
 
-def custom_page_not_found_view(request, exception):
+def error(request, id):
+    print(id)
+    return render(request, '404.html', {}, status=404)
+
+def error1(request, id1, id2):
+    print(id)
     return render(request, '404.html', {}, status=404)
 
 
