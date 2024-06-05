@@ -26,41 +26,41 @@
     "projects":[
         {"title":"OCR-QA Project",
         "description":"Automate document analysis and question generation using Optical Character Recognition (OCR) techniques and OpenAI's GPT-3.5-turbo model.",
-        "image":"1",
+        "image":"one",
         "link":"https://github.com/ynstf/Automated-Document-Analysis-and-Question-Generation?tab=readme-ov-file"},
         
         {"title":"Table Line Detection with OpenCV",
-        "image":"2",
+        "image":"two",
         "description":"The script uses OpenCV and scikit-learn for image processing and k-means clustering.",
         "link":"https://github.com/ynstf/Real-time-Table-Segmentation-and-Line-Extraction-with-OpenCV"},
         
         {"title":"Flask application for product similarity analysis.",
-        "image":"3",
+        "image":"three",
         "description":"Casa Shop is an e-commerce platform built on a microservices architecture, leveraging cutting-edge Deep Learning models for Natural Language Processing (NLP) to enhance product filtration and recommendation functionalities.",
         "link":"https://github.com/ynstf/Casa-Shop-Microservices-E-commerce-Platform-with-NLP-Product-Filtering-and-Recommendation-System/tree/main/similarity-model"},
         
         {"title":"FastAPI application for product classification based on policy compliance.",
-        "image":"4",
+        "image":"four",
         "description":"Casa Shop is an e-commerce platform built on a microservices architecture, leveraging cutting-edge Deep Learning models for Natural Language Processing (NLP) to enhance product filtration and recommendation functionalities.",
         "link":"https://github.com/ynstf/Casa-Shop-Microservices-E-commerce-Platform-with-NLP-Product-Filtering-and-Recommendation-System/tree/main/Product-classification-policy"},
         
         {"title":"MOBOOT",
-        "image":"5",
+        "image":"five",
         "description":"Moboot is a chatbot developed in Moroccan Darija, and it is considered the first of its kind. Its name 'Moboot' was chosen to align with Moroccan culture, as the name Mohammed is popular in this country and holds significant cultural connotations and dimensions.",
         "link":"https://github.com/ynstf/MOBOOT"},
         
         {"title":"Automated Tabular Data Extraction and Prediction",
-        "image":"6",
+        "image":"six",
         "description":"This Python project utilizes image processing and machine learning techniques to automate the extraction and prediction of tabular data from images. The implementation achieves over 80% accuracy and is designed to be versatile for integration into various projects.",
         "link":"https://github.com/ynstf/Automated-Extraction-and-Prediction-of-Tabular-Data-from-Images"},
         
         {"title":"BTS TELEGRAM CHATBOT",
-        "image":"7",
+        "image":"seven",
         "description":"the chatbot of the technical school Al-kindy about the AI sector's subjects",
         "link":"https://github.com/ynstf/bts-telebot"},
         
         {"title":"DJANGO CRM",
-        "image":"8",
+        "image":"eight",
         "description":"A comprehensive Customer Relationship Management (CRM) system built with Django ",
         "link":"https://github.com/ynstf/DJANGO-CRM"}
         
