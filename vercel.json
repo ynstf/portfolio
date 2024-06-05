@@ -3,14 +3,12 @@
   "builds": [
     {
       "src": "versel_deploymet/wsgi.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.7" }
     },
     {
       "src": "requirements.txt",
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.8"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
