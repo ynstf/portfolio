@@ -1,7 +1,7 @@
 # example/urls.py
 from django.urls import path
 
-from example.views import index, home
+from example.views import index, home, send_email
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -9,6 +9,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('home', index),
     path('', home,name="home"),
+    path('send_email', send_email,name="send_email"),
 ]
 
 

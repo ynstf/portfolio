@@ -5,9 +5,12 @@
         "jobtitle":"Full Stack & Machine Learning Developer"
         
     },
-    "contat": {
+    "contact": {
         "email": "younessatif2000@gmail.com",
-        "phone": "+212605153098"
+        "location": "Sidi Othman, Casablanca",
+        "iframemap": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14695.160976874227!2d-7.580946476602707!3d33.559009110129985!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda632d143aceeb5%3A0x5aab67548cf784b5!2sHAY%20AL%20MANSOUR!5e0!3m2!1sen!2sus!4v1717545615461!5m2!1sen!2sus",
+        "phone": "+212605153098",
+        "whatsapp": "212649115770"
         
     },
     "urls":{
@@ -17,12 +20,70 @@
         "kaggle":"https://www.kaggle.com/atif10"
 
     },
-    "repo": "ynstf"
+    "repo": "ynstf",
+    "technologies":["html","css","python","django","flask","fastapi","mongodb","pgsql","sklearn","tensorflow","selenium","pandas","k8s","docker"],
 
+    "projects":[
+        {"title":"OCR-QA Project",
+        "description":"Automate document analysis and question generation using Optical Character Recognition (OCR) techniques and OpenAI's GPT-3.5-turbo model.",
+        "image":"1",
+        "link":"https://github.com/ynstf/Automated-Document-Analysis-and-Question-Generation?tab=readme-ov-file"},
+        
+        {"title":"Table Line Detection with OpenCV",
+        "image":"2",
+        "description":"The script uses OpenCV and scikit-learn for image processing and k-means clustering.",
+        "link":"https://github.com/ynstf/Real-time-Table-Segmentation-and-Line-Extraction-with-OpenCV"},
+        
+        {"title":"Flask application for product similarity analysis.",
+        "image":"3",
+        "description":"Casa Shop is an e-commerce platform built on a microservices architecture, leveraging cutting-edge Deep Learning models for Natural Language Processing (NLP) to enhance product filtration and recommendation functionalities.",
+        "link":"https://github.com/ynstf/Casa-Shop-Microservices-E-commerce-Platform-with-NLP-Product-Filtering-and-Recommendation-System/tree/main/similarity-model"},
+        
+        {"title":"FastAPI application for product classification based on policy compliance.",
+        "image":"4",
+        "description":"Casa Shop is an e-commerce platform built on a microservices architecture, leveraging cutting-edge Deep Learning models for Natural Language Processing (NLP) to enhance product filtration and recommendation functionalities.",
+        "link":"https://github.com/ynstf/Casa-Shop-Microservices-E-commerce-Platform-with-NLP-Product-Filtering-and-Recommendation-System/tree/main/Product-classification-policy"},
+        
+        {"title":"MOBOOT",
+        "image":"5",
+        "description":"Moboot is a chatbot developed in Moroccan Darija, and it is considered the first of its kind. Its name 'Moboot' was chosen to align with Moroccan culture, as the name Mohammed is popular in this country and holds significant cultural connotations and dimensions.",
+        "link":"https://github.com/ynstf/MOBOOT"},
+        
+        {"title":"Automated Tabular Data Extraction and Prediction",
+        "image":"6",
+        "description":"This Python project utilizes image processing and machine learning techniques to automate the extraction and prediction of tabular data from images. The implementation achieves over 80% accuracy and is designed to be versatile for integration into various projects.",
+        "link":"https://github.com/ynstf/Automated-Extraction-and-Prediction-of-Tabular-Data-from-Images"},
+        
+        {"title":"BTS TELEGRAM CHATBOT",
+        "image":"7",
+        "description":"the chatbot of the technical school Al-kindy about the AI sector's subjects",
+        "link":"https://github.com/ynstf/bts-telebot"},
+        
+        {"title":"DJANGO CRM",
+        "image":"8",
+        "description":"A comprehensive Customer Relationship Management (CRM) system built with Django ",
+        "link":"https://github.com/ynstf/DJANGO-CRM"}
+        
+    ],
 
+    "experiences":[
 
+        {"name":"ANAPEC",
+        "image":"ANAPEC.png",
+        "post":"Data Scraping Specialist.",
+        "work":"I contributed to projects aimed at revitalizing employment opportunities. Additionally, I developed a WordPress blog website for an electrical bikes product, leveraging my expertise in web development and scraping techniques to automate operations."},
 
+        {"name":"Technical-24",
+        "image":"Technical-24.webp",
+        "post":"Backend Developer.",
+        "work":"I spearheaded the development of a comprehensive CRM platform using the Django framework. This platform revolutionized their maintenance and installation services operations, optimizing efficiency and enhancing customer satisfaction."},
 
+        {"name":"CISCM",
+        "image":"CISCM.jpeg",
+        "post":"Data Analyst.",
+        "work":"I served as a Data Analytics Intern, focused on enhancing the analytical capabilities of our e-commerce platform. Through advanced data analysis techniques, I empowered merchants to effectively analyze their stock and sales data, driving informed decision-making and business growth."}
+
+    ]
     
     
     

@@ -2,7 +2,10 @@
 from datetime import datetime
 
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.contrib import messages
+from django.core.mail import send_mail
+from .sender.send_email import send_email_to
+from django.shortcuts import render, redirect
 import json
 import requests
 from dotenv import load_dotenv
@@ -23,6 +26,22 @@ def index(request):
     '''
     return HttpResponse(html)
 
+
+def send_email(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        content = request.POST.get('content')
+
+        success = send_email_to(email,subject, content)
+        if success:
+            messages.success(request, 'Email sent successfully')
+            return redirect('home')
+        else:
+            messages.error(request, 'Failed to send email')
+            return redirect('home')
+
+
 def home(request):
 
     
@@ -38,55 +57,25 @@ def home(request):
 
     # GitHub API endpoint for listing user repositories
     url = f'https://api.github.com/users/{username}/repos'
-
     # Send GET request to GitHub API with authentication
     response = requests.get(url, headers={'Authorization': f'token {token}'})
-
-
     # Check if request was successful (status code 200)
     if response.status_code == 200:
         # Parse JSON response
         repos = response.json()
-
         # Dictionary to store language counts
         languages = []
-        
         # Count languages in each repository
         for repo in repos:
             language = repo['language']
             if language:
                 if language not in languages:
                     languages.append(language)
-
-
-
-
         # Count the number of repositories
         num_repos = len(repos)
         print(f'You have {num_repos} repositories on GitHub.')
     else:
         print('Failed to retrieve repository information.')
-
-
-
-
-
-
-    # GitHub API endpoint for getting user's contributions
-    url_contributions = f'https://api.github.com/users/{username}/contributions'
-    # Send GET request to GitHub API to get contributions
-    response_contributions = requests.get(url_contributions, headers={'Authorization': f'token {token}'})
-    print(response_contributions.content)
-    # Check if request for contributions was successful (status code 200)
-    if response_contributions.status_code == 200:
-        # Parse JSON response to get contributions data
-        contributions_data = response_contributions.json()
-        # Extract total contributions from the response
-        total_contributions = contributions_data['total']
-        # Print total number of contributions
-        print(f'Total number of contributions across all repositories: {total_contributions}')
-    else:
-        print('Failed to retrieve contributions information.')
 
 
     def get_contributions(username, token):
@@ -102,14 +91,12 @@ def home(request):
         }
         }
         ''' % username
-        
         # Send a POST request to the GraphQL API
         response = requests.post(
             'https://api.github.com/graphql',
             json={'query': query},
             headers={'Authorization': 'Bearer ' + token}
         )
-        
         # Check if the request was successful
         if response.status_code == 200:
             data = response.json()
