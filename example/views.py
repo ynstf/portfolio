@@ -57,7 +57,12 @@ def home(request):
     with open('me.json', 'r') as f:
         json_data = json.loads(f.read())
 
-    
+    load_dotenv()
+    sender_email = os.environ.get('EMAIL')  # Your Gmail email address
+    sender_password = os.environ.get('PWD')  # Your Gmail password or app password
+    print("EMAIL",sender_email)
+    print("PWD",sender_password)
+
     username = json_data['repo']
 
     # Replace 'YOUR_TOKEN' with your personal access token
