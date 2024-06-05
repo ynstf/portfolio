@@ -41,9 +41,6 @@ def send_email(request):
         recipient_email = email  # Recipient's email address
         body = content
 
-        print("key",key)
-        print("sender_email",sender_email)
-        print("sender_password",sender_password)
 
         success = send_email_to(sender_email, sender_password, recipient_email, subject, body)
 
@@ -63,15 +60,6 @@ def home(request):
     with open('me.json', 'r') as f:
         json_data = json.loads(f.read())
 
-    load_dotenv()
-    sender_email = os.environ.get('EMAIL')  # Your Gmail email address
-    key = os.environ.get('KEY')  # Your Gmail email address
-    sender_password = "ztly gbsf mhvy dfij"  # Your Gmail password or app password
-    sender_password = decrypt(sender_password, int(key))
-
-    print("key",key)
-    print("sender_email",sender_email)
-    print("sender_password",sender_password)
 
     username = json_data['repo']
 

@@ -11453,7 +11453,7 @@ pre {
   }
 }
 
-.header {
+/* .header {
   height: 94vh;
   min-height: 650px;
   border-bottom: 1px solid #dee2e6;
@@ -11539,7 +11539,10 @@ pre {
   .header .container .img-holder {
     display: none;
   }
-}
+} */
+
+
+
 
 .header .widget {
   position: relative;
