@@ -21,7 +21,7 @@
 
     },
     "repo": "ynstf",
-    "technologies":["html","css","python","django","flask","fastapi","mongodb","pgsql","sklearn","tensorflow","selenium","pandas","k8s","docker"],
+    "technologies":["html","css","python","django","flask","fastapi","mongodb","pgsql","sklearn","tensorflow","selenium","Pandas","k8s","docker"],
 
     "projects":[
         {"title":"OCR-QA Project",
