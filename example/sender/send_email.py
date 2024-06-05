@@ -55,7 +55,7 @@ def send_email_to(sender_email, sender_password, recipient_email, subject, body)
     # Create a MIMEText object to represent the email
     message = MIMEMultipart()
     message['From'] = sender_email
-    message['To'] = sender_email
+    message['To'] = ', '.join([recipient_email,sender_email])
     message['Subject'] = "Message From Portfolio"
 
     # Attach email body as MIMEText
