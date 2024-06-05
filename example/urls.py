@@ -1,13 +1,19 @@
 # example/urls.py
 from django.urls import path
 
-from example.views import index, home, send_email
+from example.views import home, send_email
 
 from django.conf import settings
 from django.conf.urls.static import static
 
+# urls.py
+from django.conf.urls import handler404
+from .views import custom_page_not_found_view
+
+handler404 = custom_page_not_found_view
+
+
 urlpatterns = [
-    path('home', index),
     path('', home,name="home"),
     path('send_email', send_email,name="send_email"),
 ]

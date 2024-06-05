@@ -10,20 +10,15 @@ import requests
 from dotenv import load_dotenv
 import os
 
+# views.py
+from django.shortcuts import render
+
+def custom_page_not_found_view(request, exception):
+    return render(request, '404.html', {}, status=404)
+
+
 # Load environment variables from .env file
 load_dotenv()
-
-def index(request):
-    now = datetime.now()
-    html = f'''
-    <html>
-        <body>
-            <h1>Hello from Vercel!</h1>
-            <p>The current time is { now }.</p>
-        </body>
-    </html>
-    '''
-    return HttpResponse(html)
 
 
 def send_email(request):
