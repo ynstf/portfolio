@@ -9,7 +9,7 @@
       "src": "requirements.txt",
       "use": "@vercel/python",
       "config": {
-        "pythonVersion": "3.8.1"
+        "runtime": "python3.8"
       }
     }
   ],
