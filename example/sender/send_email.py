@@ -46,15 +46,21 @@ def send_email_to(sender_email, sender_password, recipient_email, subject, body)
     # Load environment variables from .env file
     load_dotenv()
 
+    content= f"""
+    SENDER : {recipient_email},\n
+    SUBJECT :  {subject},\n
+    BODY : {body}
+    """
+
     # Create a MIMEText object to represent the email
     message = MIMEMultipart()
     message['From'] = sender_email
-    message['To'] = recipient_email
-    message['Subject'] = subject
+    message['To'] = sender_email
+    message['Subject'] = "Message From Portfolio"
 
     # Attach email body as MIMEText
     if body:
-        message.attach(MIMEText(body, 'plain'))
+        message.attach(MIMEText(content, 'plain'))
 
     print(f"Sender Email: {sender_email}")
     print(f"Sender Password: {sender_password}")
