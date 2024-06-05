@@ -3,7 +3,6 @@ from datetime import datetime
 
 from django.http import HttpResponse
 from django.contrib import messages
-from django.core.mail import send_mail
 from .sender.send_email import send_email_to
 from django.shortcuts import render, redirect
 import json

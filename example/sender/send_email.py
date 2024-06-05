@@ -30,5 +30,6 @@ def send_email_to(email_receiver,subject,content):
             smtp.login(email_sender, email_password)
             smtp.sendmail(email_sender, email_sender, em.as_string())
         return True
-    except:
+    except Exception as e:
+        print(f"An error occurred: {e}")
         return False
