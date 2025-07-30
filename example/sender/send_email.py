@@ -42,7 +42,7 @@ from email.mime.multipart import MIMEMultipart
 import os
 from dotenv import load_dotenv
 
-def send_email_to(sender_email, sender_password, recipient_email, subject, body):
+def send_email_to(sender_email, sender_password, recipient_email,email_reciver, subject, body):
     # Load environment variables from .env file
     load_dotenv()
 
@@ -55,7 +55,8 @@ def send_email_to(sender_email, sender_password, recipient_email, subject, body)
     # Create a MIMEText object to represent the email
     message = MIMEMultipart()
     message['From'] = sender_email
-    message['To'] = ', '.join([recipient_email,sender_email])
+    message['To'] = ', '.join([email_reciver,recipient_email,sender_email])
+    #message['To'] = f'{sender_email}'
     message['Subject'] = "Message From Portfolio"
 
     # Attach email body as MIMEText
@@ -65,17 +66,16 @@ def send_email_to(sender_email, sender_password, recipient_email, subject, body)
     print(f"Sender Email: {sender_email}")
     print(f"Sender Password: {sender_password}")
     
-    try:
-        # Connect to the SMTP server
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()  # Start TLS encryption
-        server.login(sender_email, sender_password)  # Log in to the server
+    
+    # Connect to the SMTP server
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()  # Start TLS encryption
+    
+    server.login(sender_email, sender_password)  # Log in to the server
 
-        # Send the email
-        server.sendmail(sender_email, recipient_email, message.as_string())
-        print("Email sent successfully!")
-        return True
-    except:
-        return False
+    # Send the email
+    server.sendmail(sender_email, [email_reciver,recipient_email], message.as_string())
+    print("Email sent successfully!")
+    return True
 
 

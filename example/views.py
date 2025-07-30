@@ -28,21 +28,20 @@ load_dotenv()
 
 def send_email(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
+        recipient_email = request.POST.get('email')
         subject = request.POST.get('subject')
-        content = request.POST.get('content')
+        body = request.POST.get('content')
 
         # Example usage:
         load_dotenv()
         sender_email = os.environ.get('EMAIL')  # Your Gmail email address
-        key = os.environ.get('KEY')  # Your Gmail email address
-        sender_password = "ztly gbsf mhvy dfij"  # Your Gmail password or app password
-        sender_password = decrypt(sender_password, int(key))
-        recipient_email = email  # Recipient's email address
-        body = content
+        #key = os.environ.get('KEY')  # Your Gmail email address
+        sender_password = os.environ.get('sender_password')  # Your Gmail email address
+        email_reciver = os.environ.get('email_reciver')  # Your Gmail email address
+        #sender_password = decrypt(sender_password, int(key))
 
 
-        success = send_email_to(sender_email, sender_password, recipient_email, subject, body)
+        success = send_email_to(sender_email, sender_password, recipient_email,email_reciver, subject, body)
 
 
         if success:

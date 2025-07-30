@@ -15,9 +15,10 @@ handler404 = custom_page_not_found_view"""
 
 urlpatterns = [
     path('', home,name="home"),
+    path('send_email', send_email,name="send_email"),
     path('<str:id>', error,name="error"),
     path('<str:id1>/<str:id2>', error1,name="error1"),
-    path('send_email', send_email,name="send_email"),
+    
 ]
 
 
