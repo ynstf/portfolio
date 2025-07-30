@@ -14,7 +14,7 @@
         
     },
     "urls":{
-        "cv":"https://drive.google.com/file/d/1W4rfsXm3kw3oWHHNa05kjn_BfzzMNafc/view?usp=sharing",
+        "cv":"https://drive.google.com/file/d/1lTQUlw1kkaSDzO4KymiCBQd4LJxkP-yu/view?usp=sharing",
         "github":"https://github.com/ynstf/",
         "linkedin":"https://www.linkedin.com/in/ynstf/",
         "kaggle":"https://www.kaggle.com/atif10",
@@ -25,6 +25,12 @@
     "technologies":["html","css","python","django","flask","fastapi","mongodb","pgsql","sklearn","tensorflow","selenium","Pandas","k8s","docker"],
 
     "projects":[
+        {
+        "title": "YouTube Tutorial Code Extractor",
+        "description": "An AI-powered tool that transforms any YouTube tutorial into a fully runnable project. It extracts code snippets, organizes them into a clean structure, and packages them into a ZIP to supercharge your learning flow.",
+        "image": "youtube-tutorial-extractor.png",
+        "link": "https://y2-p.vercel.app/"},
+
         {"title":"OCR-QA Project",
         "description":"Automate document analysis and question generation using Optical Character Recognition (OCR) techniques and OpenAI's GPT-3.5-turbo model.",
         "image":"1.PNG",
