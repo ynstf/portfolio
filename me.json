@@ -28,7 +28,7 @@
         {
         "title": "YouTube Tutorial Code Extractor",
         "description": "An AI-powered tool that transforms any YouTube tutorial into a fully runnable project. It extracts code snippets, organizes them into a clean structure, and packages them into a ZIP to supercharge your learning flow.",
-        "image": "youtube-tutorial-extractor.png",
+        "image": "youtube-tutorial-extractor.PNG",
         "link": "https://y2-p.vercel.app/"},
 
         {"title":"OCR-QA Project",
